@@ -10,6 +10,11 @@ export default {
       required: true,
     },
   },
+  setup(props, ctx) {
+    return {
+      repositories,
+    };
+  },
   data() {
     return {
       repositories: [], // 1
