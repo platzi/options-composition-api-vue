@@ -1,11 +1,15 @@
 <template>
-  <div></div>
+  <div>{{ text }}</div>
 </template>
 
 <script>
 export default {
   name: "App",
-  components: {},
+  data() {
+    return {
+      text: "Hola Vue",
+    };
+  },
 };
 </script>
 
