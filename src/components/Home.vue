@@ -1,25 +1,21 @@
 <template>
-  <div>{{ obj.counter }}</div>
+  <div>Fullname: {{ fullName }}</div>
 </template>
 
 <script>
-import { reactive, watch } from "vue";
+import { ref, computed } from "vue";
 
 export default {
   setup() {
-    const obj = reactive({ counter: 0 });
+    const firstName = ref("Diana");
+    const lastName = ref("Martinez");
 
-    setInterval(() => obj.counter++, 500);
-
-    watch(
-      () => obj.counter,
-      (valor, anterior) => {
-        console.log(valor, anterior);
-      }
-    );
+    const fullName = computed(() => {
+      return `${firstName.value} ${lastName.value}`;
+    });
 
     return {
-      obj,
+      fullName,
     };
   },
 };
