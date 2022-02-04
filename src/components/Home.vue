@@ -1,5 +1,5 @@
 <template>
-  <div>Fullname: {{ fullName }}</div>
+  <div>{{ fullName }}</div>
 </template>
 
 <script>
