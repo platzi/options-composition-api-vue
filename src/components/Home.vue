@@ -1,9 +1,19 @@
 <template>
-  <div>Home</div>
+  <div>{{ obj.counter }}</div>
 </template>
 
 <script>
+import { reactive } from "vue";
+
 export default {
-  setup() {},
+  setup() {
+    const obj = reactive({ counter: 0 });
+
+    setInterval(() => obj.counter++, 500);
+
+    return {
+      obj,
+    };
+  },
 };
 </script>
